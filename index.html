@@ -479,25 +479,26 @@ footer{
         <p>Questions, support, partnerships, or feedback.</p>
     </div>
     
-    <form
-  action="https://formspree.io/f/xwvzvlba"
-  method="POST"
->
-  <label>
-      Your Name:
-      <input type="Name" name="Name">
-  </label>
-<label>
-    Your Email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your Message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Submit</button>
-</form>
+    <form action="https://formspree.io/f/xwvzvlba" method="POST" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+        <div style="margin-bottom: 20px; text-align: left;">
+            <label style="display: block; margin-bottom: 8px; color: #e7dcc0; font-weight: 500; letter-spacing: 1px;">YOUR NAME:</label>
+            <input type="text" name="name" required style="width: 100%; padding: 12px; background: #1a1f1d; color: white; border: 1px solid #2d3531; font-family: inherit;">
+        </div>
+        
+        <div style="margin-bottom: 20px; text-align: left;">
+            <label style="display: block; margin-bottom: 8px; color: #e7dcc0; font-weight: 500; letter-spacing: 1px;">YOUR EMAIL:</label>
+            <input type="email" name="_replyto" required style="width: 100%; padding: 12px; background: #1a1f1d; color: white; border: 1px solid #2d3531; font-family: inherit;">
+        </div>
+        
+        <div style="margin-bottom: 25px; text-align: left;">
+            <label style="display: block; margin-bottom: 8px; color: #e7dcc0; font-weight: 500; letter-spacing: 1px;">YOUR MESSAGE:</label>
+            <textarea name="message" required rows="5" style="width: 100%; padding: 12px; background: #1a1f1d; color: white; border: 1px solid #2d3531; font-family: inherit; resize: vertical;"></textarea>
+        </div>
+        
+        <div style="text-align: center;">
+            <button type="submit" style="padding: 15px 35px; background: none; border: 2px solid #b89f62; color: #f3e6bf; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;">SEND MESSAGE</button>
+        </div>
+    </form>
 </section>
 
 <!-- FOOTER -->
