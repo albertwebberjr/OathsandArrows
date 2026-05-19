@@ -76,13 +76,13 @@
             background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('website background 2.png') center center/cover no-repeat;
             display: flex;
             justify-content: center;
-            align-items: flex-end; /* Keeps text naturally under the image banner graphic */
+            align-items: flex-end;
             text-align: center;
             padding: 120px 20px 80px 20px;
         }
         .hero-content {
             max-width: 850px;
-            background: rgba(13, 15, 14, 0.6);
+            background: rgba(13, 15, 14, 0.65);
             padding: 30px;
             border-radius: 8px;
             backdrop-filter: blur(4px);
@@ -282,7 +282,7 @@
             nav {
                 flex-direction: column !important;
                 padding: 15px 10px !important;
-                position: static !important; /* Drops fixed position so it won't break view spacing */
+                position: relative !important;
             }
             nav h1 {
                 font-size: 24px !important;
@@ -301,14 +301,15 @@
             }
 
             .hero {
-                min-height: calc(100vh - 90px) !important;
-                align-items: center !important; /* Centers layout nicely on phones */
-                background-attachment: scroll !important;
-                padding: 40px 15px !important;
+                min-height: auto !important;
+                background: url('website background 2.png') top center/contain no-repeat #0d0f0e !important;
+                padding: 0 15px 40px 15px !important;
+                display: block !important;
             }
             .hero-content {
+                margin-top: 220px !important;
                 padding: 20px 15px !important;
-                margin-top: 0 !important;
+                background: rgba(13, 15, 14, 0.9) !important;
             }
             .hero p {
                 font-size: 16px !important;
@@ -317,6 +318,7 @@
             .btn {
                 width: 100% !important;
                 padding: 12px 20px !important;
+                margin-top: 20px !important;
             }
 
             section {
@@ -333,7 +335,7 @@
             }
 
             .books-container {
-                grid-template-columns: 100% !important; /* Stacks books perfectly in single columns */
+                grid-template-columns: 100% !important;
                 gap: 25px !important;
             }
             .book-card img {
