@@ -28,7 +28,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 15px 40px;
+            padding: 18px 40px;
             background: rgba(0,0,0,0.95);
             backdrop-filter: blur(8px);
             display: flex;
@@ -70,7 +70,7 @@
             opacity: 0.7;
         }
 
-        /* --- HERO AREA --- */
+        /* --- HERO AREA (DESKTOP) --- */
         .hero {
             min-height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('website background 2.png') center center/cover no-repeat;
@@ -276,56 +276,73 @@
         }
 
         /* ==========================================================================
-           === THE MOBILITY ENGINE (Universal smartphone layout system adjustments) ==
+           === FIXED MOBILE RESPONSIVE SYSTEM ===
            ========================================================================== */
         @media (max-width: 768px) {
             nav {
                 flex-direction: column !important;
                 padding: 15px 10px !important;
-                position: relative !important;
+                position: static !important; /* Drops layout blocking */
             }
             nav h1 {
-                font-size: 24px !important;
-                margin-bottom: 10px !important;
+                font-size: 26px !important; /* Keeps your main title prominently sized */
+                margin-bottom: 12px !important;
             }
             nav div {
                 gap: 20px !important;
                 flex-wrap: wrap;
                 justify-content: center;
+                width: 100% !important;
             }
             nav a {
-                font-size: 15px !important;
+                font-size: 16px !important;
             }
             .header-fb-icon img {
-                height: 24px !important;
+                height: 26px !important;
             }
 
             .hero {
                 min-height: auto !important;
-                background: url('website background 2.png') top center/contain no-repeat #0d0f0e !important;
-                padding: 0 15px 40px 15px !important;
-                display: block !important;
+                display: flex !important;
+                flex-direction: column !important;
+                padding: 0 !important;
+                background: #0d0f0e !important; /* Clears backend void clipping */
             }
+            
+            /* Dynamically turns your main landscape asset into a proportional banner box at top of screen */
+            .hero::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 240px; /* Forces standard phone height display aspect ratio for your logo art */
+                background: url('website background 2.png') center center/cover no-repeat;
+                border-bottom: 1px solid #2d3430;
+            }
+            
             .hero-content {
-                margin-top: 220px !important;
-                padding: 20px 15px !important;
-                background: rgba(13, 15, 14, 0.9) !important;
+                margin: 0 !important;
+                padding: 30px 20px !important;
+                background: #0d0f0e !important;
+                backdrop-filter: none !important;
+                border-radius: 0 !important;
+                width: 100% !important;
             }
             .hero p {
                 font-size: 16px !important;
-                line-height: 1.5 !important;
+                line-height: 1.6 !important;
+                text-shadow: none !important;
             }
             .btn {
                 width: 100% !important;
-                padding: 12px 20px !important;
-                margin-top: 20px !important;
+                padding: 14px 20px !important;
+                margin-top: 25px !important;
             }
 
             section {
                 padding: 50px 15px !important;
             }
             .section-title h3 {
-                font-size: 30px !important;
+                font-size: 32px !important;
             }
             .section-title p {
                 font-size: 15px !important;
@@ -336,10 +353,10 @@
 
             .books-container {
                 grid-template-columns: 100% !important;
-                gap: 25px !important;
+                gap: 30px !important;
             }
             .book-card img {
-                height: 320px !important;
+                height: 340px !important;
             }
         }
     </style>
