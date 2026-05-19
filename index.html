@@ -491,9 +491,33 @@ footer{
    
     -->
 
-    <div style="text-align: center; margin-top: 20px;">
-    <a href="mailto:backwoodboondock@gmail.com?subject=Oaths%20and%20Arrows%20Inquiry" class="button" style="text-decoration: none; display: inline-block; background: #8b0000; color: white; padding: 10px 20px; font-weight: bold;">SEND MESSAGE</a>
-</div>
+    <section id="contact" class="contact">
+    <div class="section-title">
+        <h3>Contact Us</h3>
+        <p>Questions, support, partnerships, or feedback.</p>
+    </div>
+    
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; color: #f4edd2;">Your Name:</label>
+            <input type="text" name="name" required style="width: 100%; padding: 10px; background: #222; color: #fff; border: 1px solid #444;">
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; color: #f4edd2;">Your Email:</label>
+            <input type="email" name="_replyto" required style="width: 100%; padding: 10px; background: #222; color: #fff; border: 1px solid #444;">
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; color: #f4edd2;">Your Message:</label>
+            <textarea name="message" required rows="5" style="width: 100%; padding: 10px; background: #222; color: #fff; border: 1px solid #444; resize: vertical;"></textarea>
+        </div>
+        
+        <div style="text-align: center;">
+            <button type="submit" class="button" style="background: #8b0000; color: white; padding: 12px 30px; font-weight: bold; border: none; cursor: pointer;">SEND MESSAGE</button>
+        </div>
+    </form>
+</section>
     </form>
 
 </section>
