@@ -1,0 +1,520 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Oaths & Arrows</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* Aligns the link container vertically with your text links */
+.header-fb-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1px; /* Puts a clean gap between the logo and the "About" link */
+}
+
+/* This is the magic rule that forces the giant image to shrink down */
+.header-fb-icon img {
+    height: 40px;  /* Shrinks the image down to perfectly match your font height */
+    width: auto;   /* Keeps the proportions correct so the circle doesn't distort */
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* Gives it a subtle fade effect when you hover over it */
+.header-fb-icon img:hover {
+    opacity: 0.7;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d0f0e;
+    color:#e7dcc0;
+    font-family:'Roboto', sans-serif;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 40px;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(6px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    border-bottom:1px solid #2d3430;
+}
+
+nav h1{
+    font-family:'Cinzel', serif;
+    color:#d8bf7b;
+    font-size:28px;
+}
+
+nav a{
+    color:#e7dcc0;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#d8bf7b;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:100vh;
+
+    /* FULL BACKGROUND IMAGE */
+    background:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.45)),
+    url('website background 2.png') center center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h2{
+    font-family:'Cinzel', serif;
+    font-size:90px;
+    color:#f5e7bc;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    text-shadow:0 0 15px rgba(0,0,0,0.8);
+}
+
+.hero p{
+    font-size:24px;
+    color:#d2c7ae;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 40px;
+    border:2px solid #b89f62;
+    color:#f5e7bc;
+    text-decoration:none;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#b89f62;
+    color:black;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 40px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h3{
+    font-family:'Cinzel', serif;
+    font-size:48px;
+    color:#d8bf7b;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#aaa08a;
+}
+
+/* ABOUT */
+
+.about{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* BOOKS */
+
+.book-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+}
+
+.book{
+    background:#161a18;
+    border:1px solid #2b312d;
+    overflow:hidden;
+    transition:0.3s;
+    text-align:center;
+}
+
+.book:hover{
+    transform:translateY(-6px);
+    border-color:#b89f62;
+}
+
+.book a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.book img{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+    display:block;
+}
+
+.book-content{
+    padding:20px;
+}
+
+.book h4{
+    font-family:'Cinzel', serif;
+    color:#f3e6bf;
+    margin-bottom:10px;
+    font-size:24px;
+}
+
+.book p{
+    color:#b5ab95;
+    font-size:15px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#121514;
+    text-align:center;
+}
+
+.contact form{
+    max-width:600px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    background:#1a1f1d;
+    border:1px solid #2d3531;
+    color:white;
+    font-size:16px;
+}
+
+button{
+    padding:15px 35px;
+    background:none;
+    border:2px solid #b89f62;
+    color:#f3e6bf;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#b89f62;
+    color:black;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    text-align:center;
+    padding:30px;
+    color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav div{
+        margin-top:10px;
+    }
+
+    .hero h2{
+        font-size:55px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <h1>Oaths & Arrows</h1>
+
+    <div>
+<a href="https://www.facebook.com/OathsandArrows" target="_blank" class="header-fb-icon" aria-label="Facebook">
+        <img src="facebook.png" alt="Facebook">
+        <a href="#about">About</a>
+        <a href="#books">Books</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" style="padding-top: 500px;">
+
+    <div class="hero-content">
+
+        <h2></h2>
+
+        <p>
+            A gritty fantasy tabletop roleplaying game of danger,
+            exploration, survival, and legendary adventures.
+        </p>
+
+        <a href="#books" class="btn">VIEW THE COLLECTION</a>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-title">
+
+        <h3>The Adventure Begins</h3>
+
+        <p>
+            <b>Build Heroes. Hunt Villains. Forge Legends.</b>
+        </p>
+
+    </div>
+
+    <div class="about">
+
+        <p>
+            Oaths & Arrows is a dark fantasy tabletop roleplaying game
+            built around tactical combat, immersive storytelling,
+            dangerous exploration, and unforgettable campaigns.
+            Gather your party and enter a world of forgotten kingdoms,
+            ancient ruins, terrifying villains, and deadly mysteries.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- BOOKS -->
+
+<section id="books">
+
+    <div class="section-title">
+
+        <h3>The Core Collection</h3>
+
+        <p>
+            Click a book to purchase or learn more.
+        </p>
+
+    </div>
+
+    <div class="book-grid">
+
+        <!-- DM GUIDE -->
+
+        <div class="book">
+
+            <!-- REPLACE # WITH YOUR SALES LINK -->
+            <a href="https://www.barnesandnoble.com/w/oaths-arrows-albert-webber/1150151508?ean=9798256354954" target="_blank">
+
+                <img src="Lore Keepers Book.jpg" alt="DM Guide">
+
+                <div class="book-content">
+
+                    <h4>Lore Keepers Ledger</h4>
+
+                    <p>
+                        Rules, encounters, campaign tools,
+                        worldbuilding, and character creation.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <!-- PLAYERS GUIDE -->
+
+        <div class="book">
+
+            <a href="https://www.barnesandnoble.com/w/oaths-arrows-albert-webber/1149928646?ean=9798256355142" target="_blank">
+
+                <img src="O&A Front Cover.jpg" alt="Players Guide">
+
+                <div class="book-content">
+
+                    <h4>Player's Guide</h4>
+
+                    <p>
+                        Character creation, classes,
+                        combat, and gameplay systems.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <!-- VILLAINS MANUAL -->
+<style>
+
+.book img{
+    width:100%;
+    height:450px;
+    object-fit:contain;
+    background:#111;
+    padding:10px;
+    display:block;
+}
+
+</style>
+
+        <div class="book">
+
+            <a href="https://www.barnesandnoble.com/w/oaths-arrows-albert-webber/1150155171?ean=9798256355715" target="_blank">
+
+                <img src="Forged Adversaries book.jpg" alt="Villains Manual">
+
+                <div class="book-content">
+
+                    <h4>Villains Manual</h4>
+
+                    <p>
+                        Dark enemies, bosses, factions,
+                        and legendary threats.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <!-- CHARACTER SHEETS -->
+        <div class="book">
+
+            <a href="https://www.barnesandnoble.com/w/oaths-arrows-albert-webber/1150193157?ean=9798256361273" target="_blank">
+
+                <img src="Character Sheet Cover.jpg" alt="Character Sheets">
+
+                <div class="book-content">
+
+                    <h4>Character Sheets</h4>
+
+                    <p>
+                        Custom sheets for players,
+                        inventory tracking, and campaign notes.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <div class="section-title">
+
+        <h3>Contact Us</h3>
+
+        <p>
+            Questions, support, partnerships, or feedback.
+        </p>
+
+    </div>
+
+    <!-- 
+    backwoodboondock@gmail.com
+   
+    -->
+
+    <form action="mailto:backwoodboondock@gmail.com" method="POST" enctype="text/plain">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+        <button type="submit">SEND MESSAGE</button>
+
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>&copy; 2026 Oaths & Arrows — Created by Albert E. Webber Jr.</p>
+    <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="terms-of-service.html">Terms of Service</a>
+    </div>
+    
+</footer>
+
+</body>
+</html>
