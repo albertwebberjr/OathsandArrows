@@ -262,31 +262,58 @@ footer{
 @media (max-width: 768px) {
     /* Header Navigation */
     nav {
-        flex-direction: column;
-        padding: 15px !important;
-        text-align: center;
+        flex-direction: column !important;
+        padding: 15px 10px !important;
+        text-align: center !important;
+        display: flex !important;
+        align-items: center !important;
     }
+    
+    /* Centers the links and the FB icon on a fresh line */
     nav div {
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        margin-top: 12px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 20px !important; /* Spaces links evenly */
+        width: 100% !important;
     }
+    
+    /* Forces the Facebook icon to behave like the other links */
     .header-fb-icon {
-        margin-right: 0 !important;
+        margin: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+    }
+    
+    .header-fb-icon img {
+        height: 24px !important; /* Slightly scales down the FB icon for mobile alignment */
+        width: auto !important;
     }
 
     /* Hero Section (Top Title Area) */
     .hero {
-        padding: 40px 20px !important;
+        padding: 0 20px !important;
+        min-height: 100vh !important;
         background-attachment: scroll !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important; /* Pushes content down instead of clustering in the middle */
     }
+    
+    /* Adds massive breathing room so text sits nicely BELOW the big background image text */
     .hero h2 {
         font-size: 2.2rem !important;
+        margin-top: 320px !important; /* Pushes your title text safely below the background stone logo */
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
     }
+    
     .hero p {
         font-size: 1.1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 25px !important;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
     }
 
     /* Content & Book Grid Sections */
@@ -294,7 +321,6 @@ footer{
         padding: 40px 15px !important;
     }
     
-    /* Forces columns to stack vertically on phones */
     .section-content, .books-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -307,7 +333,6 @@ footer{
         text-align: center !important;
     }
 
-    /* Prevents images from breaking layout boundaries */
     .image-block img, .book-item img {
         max-width: 280px !important;
         width: 100% !important;
