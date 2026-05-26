@@ -36,7 +36,10 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
-
+.adversaries-img-container {
+    margin-top: -170px !important;
+}
+        
         /* --- NAVIGATION --- */
         nav {
             position: fixed;
@@ -299,9 +302,12 @@
                 position: static !important; /* Drops layout blocking */
             }
             nav h1 {
-                font-size: 26px !important; /* Keeps your main title prominently sized */
+                font-size: 20px !important; /* Keeps your main title prominently sized */
                 margin-bottom: 12px !important;
             }
+            .adversaries-img-container {
+    margin-top: -45px !important;
+}
             nav div {
                 gap: 20px !important;
                 flex-wrap: wrap;
@@ -422,7 +428,7 @@
     </div>
     
     <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="width: 100%; max-width: 900px; margin: -170px auto 0 auto; overflow: hidden;">
+        <div class="adversaries-img-container" style="width: 100%; max-width: 900px; margin: 0 auto; overflow: hidden;">
             <img src="Group Photo.png" alt="Oaths and Arrows Adversaries" style="width: 160%; height: auto; display: block; object-fit: contain; margin: 0 -30%;"> 
         </div>
     </div>
