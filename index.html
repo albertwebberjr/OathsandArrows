@@ -35,10 +35,7 @@
             font-family: 'Roboto', sans-serif;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-        }
-.adversaries-img-container {
-    margin-top: -170px !important;
-}
+       
         
         /* --- NAVIGATION --- */
         nav {
@@ -296,11 +293,34 @@
            === FIXED MOBILE RESPONSIVE SYSTEM ===
            ========================================================================== */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column !important;
-                padding: 15px 10px !important;
-                position: static !important; /* Drops layout blocking */
-            }
+    nav {
+        flex-direction: column !important;
+        padding: 10px !important;
+    }
+    
+    /* Forces BOTH the header and the clickable link text to shrink on small/resized screens */
+    nav h1, nav h1 a {
+        font-size: 18px !important;
+        margin-bottom: 4px !important;
+        text-align: center;
+    }
+    
+    nav div {
+        gap: 15px !important;
+    }
+    
+    /* Safely adjusts the character spacing on small screens so they never overlap text */
+    .adversaries-img-container {
+        margin-top: -30px !important;
+    }
+}
+
+/* --- DESKTOP ONLY SPACING --- */
+@media (min-width: 769px) {
+    .adversaries-img-container {
+        margin-top: -140px !important;
+    }
+}
             nav h1 {
                 font-size: 20px !important; /* Keeps your main title prominently sized */
                 margin-bottom: 12px !important;
