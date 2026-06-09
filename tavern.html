@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tavern - Oaths & Arrows</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0d9cb;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1a1510;
+            border-bottom: 2px solid #3a2e20;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #d4af37;
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #b3a286;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover { text-decoration: underline; color: #e0d9cb; }
+        
+        .shop-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background-color: #1a1612;
+            border: 1px solid #3a3025;
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 2px;
+            border: 1px solid #2d241a;
+        }
+        .product-card h3 {
+            color: #c5b497;
+            margin: 15px 0 5px 0;
+            font-size: 1.3rem;
+        }
+        .product-price {
+            color: #d4af37;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-desc {
+            font-size: 0.9rem;
+            color: #a4967f;
+            min-height: 50px;
+        }
+        .buy-btn {
+            background-color: #4a1515;
+            color: #e0d9cb;
+            border: 1px solid #6b1f1f;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            width: 100%;
+            border-radius: 2px;
+            transition: background 0.2s;
+        }
+        .buy-btn:hover { background-color: #6b1f1f; }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #665c4d;
+            font-size: 0.8rem;
+            border-top: 1px solid #221a12;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
 
+    <header>
+        <h1>The Tavern Provisioner</h1>
+        <a href="index.html" class="back-link">← Return to Main Gate</a>
+    </header>
+
+    <div class="shop-container">
+        <div class="shop-grid">
+            
+            <div class="product-card">
+                <img src="kettle-placeholder.jpg" alt="Brewing Kettle">
+                <h3>Ironmaster Boil Kettle</h3>
+                <p class="product-price">$85.00</p>
+                <p class="product-desc">Heavy-duty stainless steel brewing vessel equipped for open hearths or gas burners.</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="ingredients-placeholder.jpg" alt="Brewing Ingredients">
+                <h3>Grist & Hops Ration Pack</h3>
+                <p class="product-price">$24.50</p>
+                <p class="product-desc">Premium malted grains, crushed and packaged with dried wild hops for authentic medieval ales.</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="pump-placeholder.jpg" alt="High Temp Pump">
+                <h3>Alchemist's Liquid Transfer Pump</h3>
+                <p class="product-price">$60.00</p>
+                <p class="product-desc">High-temperature magnetic drive system to safely move boiling wort without spilling a drop.</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Oaths & Arrows — Tavern Supplies & Equipment Portfolio</p>
+    </footer>
+
+</body>
+</html>
