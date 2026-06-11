@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll the Bones - Oaths & Arrows</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0d9cb;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1a1510;
+            border-bottom: 2px solid #3a2e20;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #d4af37;
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #b3a286;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover { text-decoration: underline; color: #e0d9cb; }
+        
+        .shop-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background-color: #1a1612;
+            border: 1px solid #3a3025;
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 2px;
+            border: 1px solid #2d241a;
+            background-color: #120f0c;
+        }
+        .product-card h3 {
+            color: #c5b497;
+            margin: 15px 0 5px 0;
+            font-size: 1.3rem;
+        }
+        .product-desc {
+            font-size: 0.9rem;
+            color: #a4967f;
+            min-height: 50px;
+            margin-bottom: 20px;
+        }
+        .status-btn {
+            background-color: #2b231a;
+            color: #8c7e69;
+            border: 1px solid #3d3224;
+            padding: 10px 20px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-weight: bold;
+            width: 100%;
+            border-radius: 2px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #665c4d;
+            font-size: 0.8rem;
+            border-top: 1px solid #221a12;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
 
+    <header>
+        <h1>Roll The Bones Gaming</h1>
+        <a href="index.html" class="back-link">← Return to Main Gate</a>
+    </header>
+
+    <div class="shop-container">
+        
+        <h2 style="color: #d4af37; border-bottom: 1px solid #3a3025; padding-bottom: 10px; margin-top: 40px; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem;">📜 Core Rulebooks & Tomes</h2>
+        <div class="shop-grid" style="margin-bottom: 50px;">
+            
+            <div class="product-card">
+                <img src="O&A Front Cover.jpg" alt="Oaths & Arrows Player Guide">
+                <h3>Oaths & Arrows: Player's Guide</h3>
+                <p class="product-desc">The core foundation. Complete rules for gritty character creation, historical class pathways, dynamic low-fantasy combat, and survival mechanics.</p>
+                <button class="status-btn" disabled>Coming Soon</button>
+            </div>
+
+            <div class="product-card">
+                <img src="Lore Keepers Book.jpg" alt="Lore Keeper Ledger">
+                <h3>Lore Keeper’s Ledger</h3>
+                <p class="product-desc">Essential tools for the campaign master. Packed with deep tactical system rules, terrain navigation guidelines, and exploration generators.</p>
+                <button class="status-btn" disabled>Coming Soon</button>
+            </div>
+
+            <div class="product-card">
+                <img src="Villains Manual.jpg" alt="Villains Manual">
+                <h3>The Villains Manual</h3>
+                <p class="product-desc">A comprehensive guide detailing brutal rival factions, human warbands, environmental hazards, and legendary strategic villain combat loops.</p>
+                <button class="status-btn" disabled>Coming Soon</button>
+            </div>
+
+        </div>
+
+        <h2 style="color: #d4af37; border-bottom: 1px solid #3a3025; padding-bottom: 10px; margin-top: 40px; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem;">⚔️ Chronicles, Modules & Adversaries</h2>
+        <div class="shop-grid" style="margin-bottom: 50px;">
+            
+            <div class="product-card">
+                <img src="Forged Adversaries book.jpg" alt="Forged Adversaries">
+                <h3>Forged Adversaries Campaign</h3>
+                <p class="product-desc">An extensive, branching campaign module tracking deep political corruption, border conflicts, and high-stakes low-fantasy skirmishes.</p>
+                <button class="status-btn" disabled>Coming Soon</button>
+            </div>
+
+            <div class="product-card">
+                <img src="the tavern.jpg" alt="Black Flags Expansion">
+                <h3>Black Flags and Tides</h3>
+                <p class="product-desc">The upcoming pirate-themed standalone expansion. Introduces rigorous naval crew management, black-powder rules, and coastal open seas raiding.</p>
+                <button class="status-btn" disabled>Coming Soon</button>
+            </div>
+
+        </div>
+
+        <h2 style="color: #d4af37; border-bottom: 1px solid #3a3025; padding-bottom: 10px; margin-top: 40px; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem;">🛡️ Miniature Soldiers & Sellswords</h2>
+        <div class="shop-grid" style="margin-bottom: 50px;">
+            
+            <div class="product-card">
+                <img src="the tavern.jpg" alt="Frontier Vanguard Set">
+                <h3>Frontier Vanguard Miniatures Set</h3>
+                <p class="product-desc">Finely detailed unpainted figures representing professional border guards, dynamic skirmish line archers, and armored plate knights.</p>
+                <button class="status-btn" disabled>Coming Soon</button>
+            </div>
+
+            <div class="product-card">
+                <img src="the tavern.jpg" alt="Highwaymen Set">
+                <h3>Highwaymen & Outlaw Outriders</h3>
+                <p class="product-desc">A tactical collection of low-fantasy skirmish antagonists, featuring forest bandits, crossbow irregulars, and rogue mercenaries.</p>
+                <button class="status-btn" disabled>Coming Soon</button>
+            </div>
+
+            <div class="product-card">
+                <img src="the tavern.jpg" alt="Heavy Iron Ballista">
+                <h3>Heavy Siege Defenses & Artillery</h3>
+                <p class="product-desc">Highly detailed tabletop scenery items and operational war machines, including scaled fortifications and iron ballistas.</p>
+                <button class="status-btn" disabled>Coming Soon</button>
+            </div>
+
+        </div>
+
+        <h2 style="color: #d4af37; border-bottom: 1px solid #3a3025; padding-bottom: 10px; margin-top: 40px; text-transform: uppercase; letter-spacing: 1px; font-size: 1.6rem;">🎨 Detail Paints & Pigments</h2>
+        <div class="shop-grid" style="margin-bottom: 30px;">
+            
+            <div class="product-card">
+                <img src="the tavern.jpg" alt="Rusted Iron Pigment">
+                <h3>Rusted Armor Base Acrylic</h3>
+                <p class="product-desc">High-density detail paint specifically formulated for realistic weathering, oxidized steel plates, and battered iron weapons.</p>
+                <button class="status-btn" disabled>Coming Soon</button>
+            </div>
+
+            <div class="product-card">
+                <img src="the tavern.jpg" alt="Muddy Trench Wash">
+                <h3>Muddy Trench Shadow Wash</h3>
+                <p class="product-desc">A deep fluid shade designed to settle into miniature creases, casting natural grim shadow work onto cloaks and boots.</p>
+                <button class="status-btn" disabled>Coming Soon</button>
+            </div>
+
+            <div class="product-card">
+                <img src="the tavern.jpg" alt="Sun-Bleached Linen">
+                <h3>Sun-Bleached Linen Highlight</h3>
+                <p class="product-desc">Ultra-fine pigment smooth coat for high-contrast highlights on canvas tents, uniform surcoats, and worn leather padding.</p>
+                <button class="status-btn" disabled>Coming Soon</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Oaths & Arrows — Roll the Bones Gaming Portfolio</p>
+    </footer>
+
+</body>
+</html>
